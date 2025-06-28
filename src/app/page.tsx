@@ -23,14 +23,14 @@ const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
   return (
-    <main className="flex flex-col min-h-[100dvh] space-y-10 ">
+<main className="flex flex-col min-h-[100dvh] space-y-10 ">
       <HeroProfile />
 
-      <BlurFade delay={BLUR_FADE_DELAY * 12}>
-        <GalleryCard />
-      </BlurFade>
+  <BlurFade delay={BLUR_FADE_DELAY * 12}>
+  <GalleryCard />
+  </BlurFade>
 
-      <section id="about">
+  <section id="about">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
           <h2 className="text-xl font-bold">About</h2>
         </BlurFade>
@@ -39,9 +39,9 @@ export default function Page() {
             {DATA.summary}
           </Markdown>
         </BlurFade>
-      </section>
+  </section>
 
-      <section id="technology">
+  <section id="technology">
         <BlurFade delay={BLUR_FADE_DELAY * 5.5}>
           <h2 className="text-xl font-bold mb-4">Technologies I Use</h2>
           <p className="text-sm text-muted-f</div>oreground mb-6">
@@ -52,9 +52,9 @@ export default function Page() {
             <IconCloudDemo />
           </div>
         </BlurFade>
-      </section>
+  </section>
       <OSExperience />
-      <section id="education">
+  <section id="education">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 7}>
             <h2 className="text-xl font-bold">Education</h2>
@@ -76,8 +76,8 @@ export default function Page() {
             </BlurFade>
           ))}
         </div>
-      </section>
-      <section id="short-courses">
+  </section>
+  <section id="short-courses">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 8.5}>
             <h2 className="text-xl font-bold">Short Courses</h2>
@@ -100,23 +100,85 @@ export default function Page() {
             </BlurFade>
           ))}
         </div>
-      </section>
-      <section id="skills">
-        <div className="flex min-h-0 flex-col gap-y-3">
+  </section>
+  <section id="skills">
+        <div className="flex flex-col gap-y-2">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
-            <h2 className="text-xl font-bold">Skills</h2>
+        <h2 className="text-lg font-semibold">Skills</h2>
           </BlurFade>
-          <div className="flex flex-wrap gap-1">
-            {DATA.skills.map((skill, id) => (
-              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                <Badge key={skill}>{skill}</Badge>
+
+          {/* Skills with Icons */}
+          <div className="space-y-1">
+        {DATA.skillsWithIcons.map((category, categoryIndex) => (
+          <BlurFade
+            key={categoryIndex}
+            delay={BLUR_FADE_DELAY * 9.2 + categoryIndex * 0.1}
+          >
+            <div className="space-y-2">
+          <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4">
+            {category.skills.map((skill, skillIndex) => (
+              <BlurFade
+            key={skill.name}
+            delay={
+              BLUR_FADE_DELAY * 9.4 +
+              categoryIndex * 0.1 +
+              skillIndex * 0.05
+            }
+              >
+            <div className="flex flex-col items-center p-2 rounded-md border border-border bg-card hover:shadow-md transition-shadow">
+              <div className="flex items-center gap-2">
+                <img
+              src={skill.icon}
+              alt={skill.name}
+              className="w-6 h-6"
+                />
+                <span className="text-sm font-medium text-foreground">
+              {skill.name}
+                </span>
+              </div>
+            </div>
               </BlurFade>
             ))}
           </div>
-        </div>
-      </section>
+            </div>
+          </BlurFade>
+        ))}
+          </div>
 
-      <section id="non-tech-skills">
+          {/* Fallback: Simple Skills Badges */}
+          <BlurFade delay={BLUR_FADE_DELAY * 10.5}>
+        <div>
+          <h3 className="text-sm font-medium text-muted-foreground mb-2">
+            Additional Skills
+          </h3>
+          <div className="flex flex-wrap gap-2">
+            {DATA.skills
+          .filter((skill) =>
+            !DATA.skillsWithIcons.some((cat) =>
+              cat.skills.some((s) =>
+            s.name.toLowerCase().includes(skill.toLowerCase())
+              )
+            )
+          )
+          .map((skill, id) => (
+            <BlurFade
+              key={skill}
+              delay={BLUR_FADE_DELAY * 11 + id * 0.05}
+            >
+              <div className="flex items-center gap-2 p-2 rounded-md border border-border bg-card hover:shadow-md transition-shadow">
+            <span className="text-sm font-medium text-foreground">
+              {skill}
+            </span>
+              </div>
+            </BlurFade>
+          ))}
+          </div>
+        </div>
+          </BlurFade>
+        </div>
+  </section>
+
+  <section id="non-tech-skills">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 12}>
             <h2 className="text-xl font-bold">Non-Technical Skills</h2>
@@ -159,9 +221,9 @@ export default function Page() {
             ))}
           </div>
         </div>
-      </section>
+  </section>
  
-           <section id="projects">
+  <section id="projects">
               <div className="space-y-12 w-full py-12">
                 <BlurFade delay={BLUR_FADE_DELAY * 11}>
                   <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -201,13 +263,13 @@ export default function Page() {
                   ))}
                 </div>
               </div>
-            </section>
+  </section>
 
-        <section id="contact">
+<section id="contact">
         <BlurFade delay={BLUR_FADE_DELAY * 13}>
           <Contact />
         </BlurFade>
-      </section>
+</section>
     </main>
   );
 }

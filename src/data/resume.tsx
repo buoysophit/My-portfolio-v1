@@ -1,5 +1,6 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, FolderIcon, Contact2Icon, BinaryIcon, ActivityIcon, FolderHeartIcon } from "lucide-react";
+import { ArchiveIcon } from "@radix-ui/react-icons";
+import { HomeIcon, FolderIcon, Contact2Icon, BinaryIcon, ActivityIcon, FolderHeartIcon, AwardIcon, SendHorizontalIcon } from "lucide-react";
 
 export const DATA = {
   name: "BuoySophit",
@@ -57,8 +58,9 @@ export const DATA = {
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "#projects", icon: BinaryIcon, label: "Projects" },
-    { href: "#contact", icon: Contact2Icon, label: "Contact" },
-    { href: "/resume", icon: FolderHeartIcon, label: "Resume" },
+    { href: "/Achievement ", icon: AwardIcon, label: "Certificates" },
+    { href: "#contact", icon: SendHorizontalIcon, label: "Contact" },
+
 
   ],
   contact: {
@@ -74,21 +76,20 @@ export const DATA = {
 
         navbar: true,
       },
+
       LinkedIn: {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/buoy-sophit-06111a2b4/",
         icon: Icons.linkedin,
-
         navbar: true,
       },
 
-      Telgram: {
+      Telegram:{
         name: "Telegram",
-        url: "https://t.me/buoysophit",
+        url: "https://t.me/buoysophitt",
         icon: Icons.telegram,
         navbar: true,
-      },
-     
+      }
     },
   },
 education: [

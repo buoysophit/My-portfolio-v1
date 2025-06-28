@@ -127,9 +127,11 @@ export default function Page() {
               >
             <div className="flex flex-col items-center p-2 rounded-md border border-border bg-card hover:shadow-md transition-shadow">
               <div className="flex items-center gap-2">
-                <img
+                <Image
               src={skill.icon}
               alt={skill.name}
+              width={24}
+              height={24}
               className="w-6 h-6"
                 />
                 <span className="text-sm font-medium text-foreground">

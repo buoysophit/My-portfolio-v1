@@ -288,7 +288,7 @@ export default function Contact() {
 
               {formStatus === 'sent' && (
                 <div className="text-center text-sm text-green-600 dark:text-green-400">
-                  Thank you! I'll get back to you soon.
+                  Thank you! I&apos;ll get back to you soon.
                 </div>
               )}
             </form>

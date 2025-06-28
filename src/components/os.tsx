@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import BlurFade from "@/components/magicui/blur-fade";
 
 const BLUR_FADE_DELAY = 0.04;
@@ -82,9 +83,11 @@ export default function OSExperience() {
                   <div className="flex justify-center mb-6">
                     <div className="relative">
                       <div className={`absolute inset-0 ${os.colors.iconBg} rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-500`}></div>
-                      <img
+                      <Image
                         src={os.icon}
                         alt={os.name}
+                        width={64}
+                        height={64}
                         className="w-16 h-16 relative z-10 drop-shadow-lg"
                       />
                     </div>

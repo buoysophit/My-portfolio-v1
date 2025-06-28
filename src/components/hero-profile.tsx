@@ -62,7 +62,7 @@ export default function HeroProfile() {
           <div className="space-y-4">
             <BlurFadeText
               delay={BLUR_FADE_DELAY}
-              className="text-4xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent"
+              className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent"
               yOffset={8}
               text={`Hi, I'm ${DATA.name}`}
             />

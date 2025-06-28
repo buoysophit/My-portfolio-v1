@@ -15,16 +15,16 @@ const BLUR_FADE_DELAY = 0.04;
 export default function HeroProfile() {
   return (
     <section className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-      <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
-                {/* Right Image */}
+      <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16 items-center">
+        {/* Right Image */}
         <BlurFade delay={BLUR_FADE_DELAY * 5}>
           <div className="relative flex items-center justify-center lg:justify-end">
-            <div className="relative">
+            <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-none">
               {/* Decorative background elements */}
               <div className="absolute -inset-4 rounded-3xl bg-gradient-to-r from-primary/20 to-secondary/20 blur-2xl" />
               <div className="absolute -top-8 -right-8 h-32 w-32 rounded-full bg-primary/10 blur-3xl" />
               <div className="absolute -bottom-8 -left-8 h-24 w-24 rounded-full bg-secondary/10 blur-2xl" />
-              
+
               {/* Main image container */}
               <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-muted/50 to-muted border backdrop-blur-sm">
                 <Image
@@ -32,10 +32,10 @@ export default function HeroProfile() {
                   alt={DATA.name}
                   width={400}
                   height={500}
-                  className="object-cover transition-transform duration-500 hover:scale-105"
+                  className="object-cover w-full h-auto transition-transform duration-500 hover:scale-105"
                   priority
                 />
-                
+
                 {/* Overlay gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-background/20 via-transparent to-transparent" />
               </div>
@@ -73,22 +73,6 @@ export default function HeroProfile() {
               text={DATA.description}
             />
           </div>
-
-          {/* <BlurFade delay={BLUR_FADE_DELAY * 3}>
-            <div className="flex flex-wrap gap-2">
-              {DATA.skills.slice(0, 6).map((skill, id) => (
-                <Badge key={skill} variant="secondary" className="text-sm">
-                  {skill}
-                </Badge>
-              ))}
-              {DATA.skills.length > 6 && (
-                <Badge variant="outline" className="text-sm">
-                  +{DATA.skills.length - 6} more
-                </Badge>
-              )}
-            </div>
-          </BlurFade> */}
-
           <BlurFade delay={BLUR_FADE_DELAY * 4}>
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
               <div className="flex gap-3">
@@ -100,29 +84,6 @@ export default function HeroProfile() {
                   Contact Me
                 </Button>
               </div>
-              
-              {/* <div className="flex items-center gap-2">
-                {Object.entries(DATA.contact.social)
-                  .filter(([, social]) => social.navbar)
-                  .map(([name, social]) => (
-                    <Button
-                      key={name}
-                      variant="ghost"
-                      size="icon"
-                      className="h-10 w-10 hover:bg-muted/80"
-                      asChild
-                    >
-                      <a
-                        href={social.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`Visit ${name}`}
-                      >
-                        <social.icon className="h-5 w-5" />
-                      </a>
-                    </Button>
-                  ))}
-              </div> */}
             </div>
           </BlurFade>
         </div>

@@ -243,7 +243,7 @@ projects: [
         },
         {
           type: "Source",
-          href: "https://github.com/magicuidesign/magicui",
+          href: "https://github.com/buoysophit",
           icon: <Icons.github className="size-3" />,
         },
       ],
@@ -270,7 +270,7 @@ projects: [
         },
         {
           type: "Source",
-          href: "https://github.com/dillionverma/llm.report",
+          href: "https://github.com/buoysophit",
           icon: <Icons.github className="size-3" />,
         },
       ],

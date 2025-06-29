@@ -58,7 +58,7 @@ export const DATA = {
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "#projects", icon: BinaryIcon, label: "Projects" },
-    { href: "/Achievement ", icon: AwardIcon, label: "Certificates" },
+    { href: "/certificate", icon: AwardIcon, label: "Certificates" },
     { href: "#contact", icon: SendHorizontalIcon, label: "Contact" },
 
 
@@ -164,7 +164,6 @@ education: [
       description: "Comprehensive course on containerization and orchestration with Docker and Kubernetes."
     },
   ],
-// ...existing code...
 projects: [
    {
       title: "Html CSS Javascript With PHP-Ecommerce",
@@ -279,8 +278,6 @@ projects: [
       video: "https://cdn.llm.report/openai-demo.mp4",
     },
 ],
-// ...existing code...
-
 nonTechSkills: [
     {
       category: "Linux Customization",

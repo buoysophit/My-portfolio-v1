@@ -13,6 +13,23 @@ import { ArrowDownIcon, MapPinIcon } from "lucide-react";
 const BLUR_FADE_DELAY = 0.04;
 
 export default function HeroProfile() {
+  // Function to handle CV download
+  const handleDownloadCV = () => {
+    const link = document.createElement("a");
+    link.href = "/assets/pdf/Buoysophit-CV-2025.pdf";
+    link.download = "Buoysophit-CV-2025.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  // Function to handle Telegram contact
+  const handleContactTelegram = () => {
+    // Replace 'your_telegram_username' with your actual Telegram username
+    const telegramUsername = "buoysophitt"; // Your Telegram username without @
+    window.open(`https://t.me/${telegramUsername}`, "_blank");
+  };
+
   return (
     <section className="mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16 items-center">
@@ -76,19 +93,21 @@ export default function HeroProfile() {
           <BlurFade delay={BLUR_FADE_DELAY * 4}>
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
               <div className="flex gap-3">
-                <Button size="lg" className="group">
+                <Button size="lg" className="group" onClick={handleDownloadCV}>
                   <ArrowDownIcon className="mr-2 h-4 w-4 transition-transform group-hover:translate-y-1" />
                   View Resume
                 </Button>
-                <Button variant="outline" size="lg">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  onClick={handleContactTelegram}
+                >
                   Contact Me
                 </Button>
               </div>
             </div>
           </BlurFade>
         </div>
-
-
       </div>
 
       {/* Bottom section with additional info */}

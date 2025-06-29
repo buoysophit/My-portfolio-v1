@@ -15,10 +15,6 @@ import HeroProfile from "@/components/hero-profile";
 import Contact from "@/components/contact";
 import OSExperience from "@/components/os";
 
-
-
-
-
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
@@ -77,7 +73,7 @@ export default function Page() {
           ))}
         </div>
   </section>
-  <section id="short-courses">
+  {/* <section id="short-courses">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 8.5}>
             <h2 className="text-xl font-bold">Short Courses</h2>
@@ -100,7 +96,7 @@ export default function Page() {
             </BlurFade>
           ))}
         </div>
-  </section>
+  </section> */}
   <section id="skills">
         <div className="flex flex-col gap-y-2">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>

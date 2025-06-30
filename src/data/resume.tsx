@@ -301,12 +301,12 @@ nonTechSkills: [
       level: "Intermediate"
     },
     {
-      category: "Audio Visualization",
-      skill: "Cava",
-      description: "Console-based audio visualizer for music and system audio",
-      icon: "🎵",
+      category: "Graphic Design",
+      skill: "Canva",
+      description: "Graphic design, presentations, social media content, and visual branding",
+      icon: "🎨",
       level: "Intermediate"
-    }
+   }
   ],
   
  

@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { ArchiveIcon } from "@radix-ui/react-icons";
+import Image from 'next/image';
 import { HomeIcon, FolderIcon, Contact2Icon, BinaryIcon, ActivityIcon, FolderHeartIcon, AwardIcon, SendHorizontalIcon } from "lucide-react";
 
 export const DATA = {
@@ -171,7 +171,7 @@ projects: [
       dates: "",
       active: true,
       description:
-        "Developed an AI Customer Support Chatbot which automatically responds to customer support tickets using the latest GPT models.",
+        "Developed a full-stack e-commerce application using HTML, CSS, JavaScript, and PHP. The project includes user authentication, product management, and a shopping cart system.",
       technologies: [
         "Html",
         "css",
@@ -186,9 +186,32 @@ projects: [
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
+      image: "/assets/video/Pro1.png",
       video:
-        "/assets/video/Pro1.mp4",
+        "",
+    },
+
+    {
+      title: "Inventory Management System",
+      href: "",
+      dates: "",
+      active: true,
+      description:
+        "Developed a desktop application for inventory management using C# Winform and MySQL. The application allows users to manage products, suppliers, and sales transactions efficiently.",
+      technologies: [
+        "C# Winform",
+        "Mysql",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/buoysophit/Inventory-Management-System.git",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/assets/video/Pro1.png",
+      video:
+        "",
     },
   
   {

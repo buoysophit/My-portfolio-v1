@@ -15,7 +15,6 @@ export default function Page() {
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10 ">
       <HeroProfile />
-
       <BlurFade delay={BLUR_FADE_DELAY * 12}>
         <GalleryCard />
       </BlurFade>
@@ -26,7 +25,7 @@ export default function Page() {
 
       <section id="technology">
         <BlurFade delay={BLUR_FADE_DELAY * 5.5}>
-          <h2 className="text-xl font-bold mb-4">Technologies I Use</h2>
+          <h2 className="text-xl font-bold mb-4">Technologies</h2>
           <p className="text-sm text-muted-f</div>oreground mb-6">
             Here are some of the main technologies, frameworks, and tools I work
             with regularly:

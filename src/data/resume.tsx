@@ -210,7 +210,7 @@ projects: [
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/assets/img/ArchLinux.png",
+      image: "/assets/img/ArchLinux.gif",
       video:"",
     },
 

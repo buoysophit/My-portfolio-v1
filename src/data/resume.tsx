@@ -251,6 +251,11 @@ projects: [
        
       ],
       links: [
+         {
+          type: "Demo",
+          href: "https://game-pav-si-sung-khmer.vercel.app/",
+          icon: <Icons.globe className="size-3" />,
+        },
         {
           type: "Source",
           href: "https://github.com/buoysophit/Game-Pav-Si-Sung-khmer.git",

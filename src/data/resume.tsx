@@ -238,30 +238,28 @@ projects: [
     },
   
   {
-      title: "Laravel API With ReactJS - Ecommerce",
+      title: "ហ្គេម ប៉ាវ ស៊ី ស៊ុង",
       href: "",
       dates: "",
       active: true,
       description:
-        "With the release of the [OpenAI GPT Store](https://openai.com/blog/introducing-the-gpt-store), I decided to build a SaaS which allows users to collect email addresses from their GPT users. This is a great way to build an audience and monetize your GPT API usage.",
+        "ប៉ាវ សុី ស៊ុង is a traditional Khmer version of the classic Rock Paper Scissors game. This web-based game features beautiful Khmer typography and a modern, responsive design that brings the beloved childhood game to the digital world.",
       technologies: [
-        "Next.js",
-        "Typescript",
-        "mysql",
-        "TailwindCSS",
-        "Stripe",
-        "laravel API",
+        "HTML",
+        "CSS",
+        "JAVASCRIPT",
+       
       ],
       links: [
         {
           type: "Source",
-          href: "https://github.com/buoysophit/nitastore.git",
+          href: "https://github.com/buoysophit/Game-Pav-Si-Sung-khmer.git",
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
+      image: "/assets/img/Game.png",
       video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
+        "",
     },
 
      {

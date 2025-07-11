@@ -186,9 +186,8 @@ projects: [
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/assets/video/Pro1.png",
-      video:
-        "",
+      image: "",
+      video:"/assets/video/Pro1.webm",
     },
 
     {
@@ -242,36 +241,36 @@ projects: [
     },
 
      {
-      title: "OpenSource Projects Ricing Archlinux",
-      href: "https://hyprland.org",
-      dates: "June 2023 - Present",
+      title: "Phitter Shop UI",
+      href: "Ecommercer UI",
+      dates: "June 2025 - Present",
       active: true,
       description:
         "Designed, developed and sold animated UI components for developers.",
       technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
+        "ReactJS",
+        "vite",
         "TailwindCSS",
-        "Stripe",
-        "Shadcn UI",
-        "Magic UI",
+        "AOS",
+        "Redux Toolkit",
+        "Axios ",
+        "Lucide React",
+        " ESLint",
       ],
       links: [
         {
-          type: "Website",
-          href: "https://magicui.design",
+          type: "Demo",
+          href: "https://phitter-shop-react-js.vercel.app/",
           icon: <Icons.globe className="size-3" />,
         },
         {
           type: "Source",
-          href: "https://github.com/buoysophit",
+          href: "https://github.com/buoysophit/Phitter-Shop-ReactJS.git",
           icon: <Icons.github className="size-3" />,
         },
       ],
       image: "",
-      video: "https://cdn.magicui.design/bento-grid.mp4",
+      video: "/assets/video/Pro2.webm",
     },
     {
       title: "Ecommerce Application",

@@ -189,6 +189,30 @@ projects: [
       image: "/assets/img/Pro1.gif",
       video:"",
     },
+    {
+      title: "Arch Linux Ricing",
+      href: "",
+      dates: "",
+      active: true,
+      description:
+        "Customized the Arch Linux desktop environment with a focus on aesthetics and user experience. Implemented various themes, icons, and configurations to create a unique and visually appealing setup.",
+      technologies: [
+        "BSPWM",
+        "Arch Linux OS",
+        "Neofetch",
+        "Neovim",
+        "Polybar",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/buoysophit/My-Archlinux-Config.git",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/assets/img/ArchLinux.png",
+      video:"",
+    },
 
     {
       title: "Inventory Management System",

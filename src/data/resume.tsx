@@ -252,7 +252,7 @@ projects: [
       ],
       links: [
          {
-          type: "Demo",
+          type: "Playgame",
           href: "https://game-pav-si-sung-khmer.vercel.app/",
           icon: <Icons.globe className="size-3" />,
         },

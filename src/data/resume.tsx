@@ -208,7 +208,7 @@ projects: [
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/assets/video/Pro1.png",
+      image: "/assets/img/Pro3.gif",
       video:
         "",
     },

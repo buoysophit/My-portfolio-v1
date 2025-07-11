@@ -186,8 +186,8 @@ projects: [
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
-      video:"/assets/video/Pro1.webm",
+      image: "/assets/img/Pro1.gif",
+      video:"",
     },
 
     {
@@ -269,8 +269,8 @@ projects: [
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
-      video: "/assets/video/Pro2.webm",
+      image: "/assets/img/Pro2.gif",
+      video: "",
     },
     {
       title: "Ecommerce Application",

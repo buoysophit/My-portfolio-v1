@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import Markdown from "react-markdown";
+import { GifImage } from "@/components/gif-image";
 
 interface Props {
   title: string;
@@ -61,7 +62,7 @@ export function ProjectCard({
           />
         )}
         {image && (
-          <Image
+          <GifImage
             src={image}
             alt={title}
             width={500}

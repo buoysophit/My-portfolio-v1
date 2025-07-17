@@ -9,6 +9,7 @@ import Education from "@/components/education";
 import About from "@/components/aboutme";
 import Skills from "@/components/myskill";
 import Projects from "@/components/myproject";
+import MyFavAnime from "@/components/myfavanime";
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
@@ -57,6 +58,12 @@ export default function Page() {
 
       <section id="non-tech-skills">
         <NonTechSkills />
+      </section>
+
+      <section id="favorite-anime">
+        <BlurFade delay={BLUR_FADE_DELAY * 11}>
+          <MyFavAnime />
+        </BlurFade>
       </section>
 
       <section id="projects">

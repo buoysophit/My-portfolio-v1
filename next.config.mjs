@@ -14,6 +14,18 @@ const nextConfig = {
         hostname: 'upload.wikimedia.org',
         port: '',
         pathname: '/wikipedia/commons/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'image.tmdb.org',
+        port: '',
+        pathname: '/t/p/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'via.placeholder.com',
+        port: '',
+        pathname: '/**',
       }
     ],
     formats: ['image/webp', 'image/avif'],

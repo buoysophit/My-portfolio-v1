@@ -358,5 +358,43 @@ nonTechSkills: [
    }
   ],
   
+  favoriteAnime: [
+    {
+      title: "Attack on Titan",
+      genre: "Action, Drama, Fantasy",
+      rating: "9.5/10",
+      status: "Completed",
+      description: "Epic story of humanity's fight for survival against titans",
+      icon: "⚔️",
+      poster: "https://image.tmdb.org/t/p/w500/hTP1DtLGFamjfu8WqjnuQdP1n4i.jpg"
+    },
+    {
+      title: "Demon Slayer",
+      genre: "Action, Supernatural",
+      rating: "9.0/10",
+      status: "Ongoing",
+      description: "Beautiful animation and compelling story of demon hunting",
+      icon: "🗾",
+      poster: "https://image.tmdb.org/t/p/w500/xUfRZu2mi8jH6SzQEJGP6tjBuYj.jpg"
+    },
+    {
+      title: "One Piece",
+      genre: "Adventure, Comedy",
+      rating: "9.2/10",
+      status: "Ongoing",
+      description: "Epic pirate adventure with amazing world-building",
+      icon: "🏴‍☠️",
+      poster: "https://image.tmdb.org/t/p/w500/cMD9Ygz11zjJzAovURpO75Qg7rT.jpg"
+    },
+    {
+      title: "Naruto",
+      genre: "Action, Adventure",
+      rating: "8.8/10",
+      status: "Completed",
+      description: "Classic ninja story of friendship and perseverance",
+      icon: "🥷",
+      poster: "https://image.tmdb.org/t/p/w500/vauCEnR7CiyBDzRCeElKkCaXIYu.jpg"
+    }
+  ],
  
 } as const;

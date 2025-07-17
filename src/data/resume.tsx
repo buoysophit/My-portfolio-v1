@@ -360,22 +360,13 @@ nonTechSkills: [
   
   favoriteAnime: [
     {
-      title: "Attack on Titan",
-      genre: "Action, Drama, Fantasy",
-      rating: "9.5/10",
-      status: "Completed",
-      description: "Epic story of humanity's fight for survival against titans",
-      icon: "⚔️",
-      poster: "https://image.tmdb.org/t/p/w500/hTP1DtLGFamjfu8WqjnuQdP1n4i.jpg"
-    },
-    {
       title: "Demon Slayer",
       genre: "Action, Supernatural",
       rating: "9.0/10",
       status: "Ongoing",
       description: "Beautiful animation and compelling story of demon hunting",
       icon: "🗾",
-      poster: "https://image.tmdb.org/t/p/w500/xUfRZu2mi8jH6SzQEJGP6tjBuYj.jpg"
+      poster: "https://cdn.myanimelist.net/images/anime/1286/99889.jpg"
     },
     {
       title: "One Piece",
@@ -384,7 +375,7 @@ nonTechSkills: [
       status: "Ongoing",
       description: "Epic pirate adventure with amazing world-building",
       icon: "🏴‍☠️",
-      poster: "https://image.tmdb.org/t/p/w500/cMD9Ygz11zjJzAovURpO75Qg7rT.jpg"
+      poster: "https://cdn.myanimelist.net/images/anime/6/73245.jpg"
     },
     {
       title: "Naruto",
@@ -393,7 +384,34 @@ nonTechSkills: [
       status: "Completed",
       description: "Classic ninja story of friendship and perseverance",
       icon: "🥷",
-      poster: "https://image.tmdb.org/t/p/w500/vauCEnR7CiyBDzRCeElKkCaXIYu.jpg"
+      poster: "https://cdn.myanimelist.net/images/anime/13/17405.jpg"
+    },
+    {
+      title: "Vinland Saga",
+      genre: "Historical, Drama, Action",
+      rating: "9.3/10",
+      status: "Completed",
+      description: "Masterful historical drama about Vikings, war, and redemption",
+      icon: "🛡️",
+      poster: "https://cdn.myanimelist.net/images/anime/1500/103005.jpg"
+    },
+    {
+      title: "Monster",
+      genre: "Psychological, Thriller",
+      rating: "9.8/10",
+      status: "Completed",
+      description: "Dark psychological thriller about a doctor hunting a serial killer",
+      icon: "🧠",
+      poster: "https://cdn.myanimelist.net/images/anime/10/18793.jpg"
+    },
+    {
+      title: "Hunter x Hunter",
+      genre: "Adventure, Fantasy, Action",
+      rating: "9.4/10",
+      status: "Hiatus",
+      description: "Incredible adventure following young hunters in a world of mystery",
+      icon: "🎯",
+      poster: "https://cdn.myanimelist.net/images/anime/11/33657.jpg"
     }
   ],
  

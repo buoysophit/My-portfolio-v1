@@ -145,7 +145,7 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
   width: 3rem;
 }
 
-/* Terminal Mode Styles */
+/* Terminal Mode Styles - Classic Green Terminal */
 @font-face {
   font-family: 'Iosevka Nerd Font';
   src: url('https://cdn.jsdelivr.net/npm/@iosevka/iosevka@30.3.3/woff2/ttf-iosevka-term-regular.woff2') format('woff2');
@@ -155,8 +155,8 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
 
 .terminal-mode {
   font-family: 'Iosevka Nerd Font', 'JetBrains Mono', 'Fira Code', monospace !important;
-  background: #0d1117 !important;
-  color: #c9d1d9 !important;
+  background: #000000 !important;
+  color: #00ff00 !important;
 }
 
 .terminal-mode * {
@@ -164,51 +164,53 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
 }
 
 .terminal-mode .bg-background {
-  background: #0d1117 !important;
+  background: #000000 !important;
 }
 
 .terminal-mode .text-foreground {
-  color: #c9d1d9 !important;
+  color: #00ff00 !important;
 }
 
 .terminal-mode .bg-card {
-  background: #161b22 !important;
+  background: #111111 !important;
+  border: 1px solid #333333 !important;
 }
 
 .terminal-mode .text-card-foreground {
-  color: #c9d1d9 !important;
+  color: #00ff00 !important;
 }
 
 .terminal-mode .border {
-  border-color: #30363d !important;
+  border-color: #333333 !important;
 }
 
 .terminal-mode .text-muted-foreground {
-  color: #8b949e !important;
+  color: #00cc00 !important;
 }
 
 .terminal-mode .bg-muted {
-  background: #21262d !important;
+  background: #222222 !important;
 }
 
 .terminal-mode .text-primary {
-  color: #58a6ff !important;
+  color: #00ff00 !important;
 }
 
 .terminal-mode .bg-primary {
-  background: #58a6ff !important;
+  background: #00ff00 !important;
+  color: #000000 !important;
 }
 
 .terminal-mode .text-secondary {
-  color: #f85149 !important;
+  color: #00dd00 !important;
 }
 
 .terminal-mode .bg-secondary {
-  background: #21262d !important;
+  background: #333333 !important;
 }
 
 .terminal-mode .text-accent {
-  color: #7c3aed !important;
+  color: #00bb00 !important;
 }
 
 .terminal-mode h1, 
@@ -217,53 +219,56 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
 .terminal-mode h4, 
 .terminal-mode h5, 
 .terminal-mode h6 {
-  color: #58a6ff !important;
+  color: #00ff00 !important;
+  font-weight: bold;
 }
 
-.terminal-mode h1::before { content: "# "; }
-.terminal-mode h2::before { content: "## "; }
-.terminal-mode h3::before { content: "### "; }
+.terminal-mode h1::before { content: "┌─["; color: #00cc00; }
+.terminal-mode h1::after { content: "]"; color: #00cc00; }
+.terminal-mode h2::before { content: "├─["; color: #00cc00; }
+.terminal-mode h2::after { content: "]"; color: #00cc00; }
+.terminal-mode h3::before { content: "└─["; color: #00cc00; }
+.terminal-mode h3::after { content: "]"; color: #00cc00; }
 
 .terminal-mode .bg-gradient-to-br {
-  background: linear-gradient(135deg, #161b22 0%, #0d1117 100%) !important;
+  background: linear-gradient(135deg, #000000 0%, #111111 100%) !important;
 }
 
 .terminal-mode .shadow-lg,
 .terminal-mode .shadow-xl {
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5) !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7) !important;
 }
 
 .terminal-mode [data-theme*=" "],
 .terminal-mode [data-theme*=" "] span {
-  color: #c9d1d9 !important;
-  background-color: #161b22 !important;
+  color: #00ff00 !important;
+  background-color: #000000 !important;
 }
 
 .terminal-mode button {
   transition: all 0.2s ease;
+  border: 1px solid #333333;
+  background: #111111 !important;
+  color: #00ff00 !important;
 }
 
 .terminal-mode button:hover {
-  background: #30363d !important;
+  background: #222222 !important;
+  border-color: #555555;
   transform: scale(1.05);
 }
 
 .terminal-mode .dock {
-  background: rgba(22, 27, 34, 0.8) !important;
+  background: rgba(0, 0, 0, 0.95) !important;
   backdrop-filter: blur(10px);
-  border: 1px solid #30363d !important;
+  border: 1px solid #333333 !important;
 }
 
 /* Terminal cursor animation */
-.terminal-mode::after {
-  content: "";
-  display: inline-block;
-  width: 0.5rem;
-  height: 1.2rem;
-  background: #58a6ff;
+.terminal-mode .cursor::after {
+  content: "▋";
+  color: #00ff00;
   animation: terminal-cursor 1s infinite;
-  vertical-align: baseline;
-  margin-left: 0.1rem;
 }
 
 @keyframes terminal-cursor {
@@ -273,11 +278,28 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
 
 /* Terminal-style selection */
 .terminal-mode ::selection {
-  background: #388bfd33 !important;
-  color: #c9d1d9 !important;
+  background: rgba(0, 255, 0, 0.3) !important;
+  color: #000000 !important;
 }
 
 .terminal-mode ::-moz-selection {
-  background: #388bfd33 !important;
-  color: #c9d1d9 !important;
+  background: rgba(0, 255, 0, 0.3) !important;
+  color: #000000 !important;
+}
+
+/* Terminal prompt colors */
+.terminal-mode .text-green-400 {
+  color: #00ff00 !important;
+}
+
+.terminal-mode .text-blue-400 {
+  color: #00aaff !important;
+}
+
+.terminal-mode .text-white {
+  color: #00ff00 !important;
+}
+
+.terminal-mode .border-green-400 {
+  border-color: #00ff00 !important;
 }

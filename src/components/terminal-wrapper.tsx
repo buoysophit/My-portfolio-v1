@@ -34,23 +34,31 @@ export default function TerminalWrapper({
             <div className="w-3 h-3 rounded-full bg-green-500"></div>
           </div>
           <span className="text-sm text-muted-foreground font-mono">
-            {title}
+            ┌─[{title}]
           </span>
         </div>
         <div className="text-xs text-muted-foreground font-mono">
-          ~/portfolio
+          arch@portfolio:~
         </div>
       </div>
       
       {/* Terminal Content */}
       <div className="p-4 bg-card">
-        <div className="text-sm font-mono">
-          <span className="text-green-400">user@portfolio</span>
-          <span className="text-white">:</span>
+        <div className="text-sm font-mono mb-2">
+          <span className="text-green-400">┌─[</span>
+          <span className="text-green-400">arch</span>
+          <span className="text-white">@</span>
+          <span className="text-blue-400">portfolio</span>
+          <span className="text-green-400">]─[</span>
           <span className="text-blue-400">~</span>
-          <span className="text-white">$ cat {title}.md</span>
+          <span className="text-green-400">]</span>
         </div>
-        <div className="mt-2 border-l-2 border-blue-400 pl-4">
+        <div className="text-sm font-mono mb-2">
+          <span className="text-green-400">└─$</span>
+          <span className="text-white"> cat {title}.md</span>
+          <span className="cursor"></span>
+        </div>
+        <div className="border-l-2 border-green-400 pl-4 ml-2">
           {children}
         </div>
       </div>

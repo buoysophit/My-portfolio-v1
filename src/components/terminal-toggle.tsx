@@ -26,8 +26,9 @@ export function TerminalToggle() {
         strokeLinejoin="round"
         className="size-8"
       >
-        <polyline points="4,17 10,11 4,5"></polyline>
-        <line x1="12" x2="20" y1="19" y2="19"></line>
+        <rect width="18" height="18" x="3" y="3" rx="2" ry="2"/>
+        <polyline points="9,9 12,12 9,15"/>
+        <line x1="15" x2="17" y1="15" y2="15"/>
       </svg>
       <span className="sr-only">Toggle terminal mode</span>
     </Button>

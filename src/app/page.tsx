@@ -10,6 +10,7 @@ import About from "@/components/aboutme";
 import Skills from "@/components/myskill";
 import Projects from "@/components/myproject";
 import MyFavAnime from "@/components/myfavanime";
+import TerminalWrapper from "@/components/terminal-wrapper";
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
@@ -21,20 +22,24 @@ export default function Page() {
       </BlurFade>
 
       <section id="about">
-        <About />
+        <TerminalWrapper title="about">
+          <About />
+        </TerminalWrapper>
       </section>
 
       <section id="technology">
-        <BlurFade delay={BLUR_FADE_DELAY * 5.5}>
-          <h2 className="text-xl font-bold mb-4">Technologies</h2>
-          <p className="text-sm text-muted-f</div>oreground mb-6">
-            Here are some of the main technologies, frameworks, and tools I work
-            with regularly:
-          </p>
-          <div className="flex justify-center">
-            <IconCloudDemo />
-          </div>
-        </BlurFade>
+        <TerminalWrapper title="technologies">
+          <BlurFade delay={BLUR_FADE_DELAY * 5.5}>
+            <h2 className="text-xl font-bold mb-4">Technologies</h2>
+            <p className="text-sm text-muted-foreground mb-6">
+              Here are some of the main technologies, frameworks, and tools I work
+              with regularly:
+            </p>
+            <div className="flex justify-center">
+              <IconCloudDemo />
+            </div>
+          </BlurFade>
+        </TerminalWrapper>
       </section>
 
       <section id="OS-Experience">
@@ -51,9 +56,11 @@ export default function Page() {
       </section>
 
       <section id="skills">
-        <BlurFade delay={BLUR_FADE_DELAY * 9}>
-          <Skills />
-        </BlurFade>
+        <TerminalWrapper title="skills">
+          <BlurFade delay={BLUR_FADE_DELAY * 9}>
+            <Skills />
+          </BlurFade>
+        </TerminalWrapper>
       </section>
 
       <section id="non-tech-skills">
@@ -67,9 +74,11 @@ export default function Page() {
       </section>
 
       <section id="projects">
-        <BlurFade delay={BLUR_FADE_DELAY * 10}>
-          <Projects />
-        </BlurFade>
+        <TerminalWrapper title="projects">
+          <BlurFade delay={BLUR_FADE_DELAY * 10}>
+            <Projects />
+          </BlurFade>
+        </TerminalWrapper>
       </section>
 
       <section id="contact">

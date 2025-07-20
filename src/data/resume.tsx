@@ -60,8 +60,6 @@ export const DATA = {
     { href: "#projects", icon: BinaryIcon, label: "Projects" },
     { href: "/certificate", icon: AwardIcon, label: "Certificates" },
     { href: "#contact", icon: SendHorizontalIcon, label: "Contact" },
-
-
   ],
   contact: {
     email: "Bouysophit11@gmail.com",
@@ -73,18 +71,15 @@ export const DATA = {
         name: "GitHub",
         url: "https://github.com/buoysophit",
         icon: Icons.github,
-
         navbar: true,
       },
-
       LinkedIn: {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/buoy-sophit-06111a2b4/",
         icon: Icons.linkedin,
         navbar: true,
       },
-
-      Telegram:{
+      Telegram: {
         name: "Telegram",
         url: "https://t.me/buoysophitt",
         icon: Icons.telegram,
@@ -92,7 +87,7 @@ export const DATA = {
       }
     },
   },
-education: [
+  education: [
     {
       school: "Royal University of Phnom Penh",
       href: "https://rupp.edu.kh",
@@ -164,8 +159,8 @@ education: [
       description: "Comprehensive course on containerization and orchestration with Docker and Kubernetes."
     },
   ],
-projects: [
-   {
+  projects: [
+    {
       title: "Html CSS Javascript With PHP-Ecommerce",
       href: "",
       dates: "",
@@ -213,7 +208,6 @@ projects: [
       image: "/assets/img/Archlinux.gif",
       video:"",
     },
-
     {
       title: "Inventory Management System",
       href: "",
@@ -236,8 +230,7 @@ projects: [
       video:
         "",
     },
-  
-  {
+    {
       title: "ហ្គេម ប៉ាវ ស៊ី ស៊ុង",
       href: "",
       dates: "",
@@ -248,7 +241,6 @@ projects: [
         "HTML",
         "CSS",
         "JAVASCRIPT",
-       
       ],
       links: [
          {
@@ -266,8 +258,7 @@ projects: [
       video:
         "",
     },
-
-     {
+    {
       title: "Phitter Shop UI",
       href: "Ecommercer UI",
       dates: "June 2025 - Present",
@@ -300,34 +291,55 @@ projects: [
       video: "",
     },
     {
-      title: "Ecommerce Application",
+      title: "Archlinux config Desktop i3-wm",
       href: "",
-      dates: "April 2023 - September 2023",
+      dates: "Jul 10 2025 - Present",
       active: true,
       description:
-        "Developed an open-source logging and analytics platform for OpenAI: Log your ChatGPT API requests, analyze costs, and improve your prompts.",
+        "Developed a customized Arch Linux desktop environment using i3 window manager. The project includes a personalized setup with themes, icons, and configurations to enhance productivity and aesthetics.",
       technologies: [
-        "flutter",
-        "firebase",
-        "PostgreSQL",
+        "",
+        "",
+        "",
+        "",
+        "",
       ],
       links: [
         {
-          type: "Website",
-          href: "https://llm.report",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
           type: "Source",
-          href: "https://github.com/buoysophit",
+          href: "https://github.com/buoysophit/My-config-archlinux-i3wm.git",
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
-      video: "https://cdn.llm.report/openai-demo.mp4",
+      image: "/assets/imgpro/i3.gif",
+      video: "",
     },
-],
-nonTechSkills: [
+    {
+      title: "Tomato Food Delivery",
+      href: "",
+      dates: "Jul 10 2025 - Present",
+      active: true,
+      description:
+        "Developed a full-stack food delivery application using ReactJS, NodeJS, ExpressJS, and MongoDB.",
+      technologies: [
+        "ReactJS",
+        "Mongodb",
+        "ExpressJS",
+        "NodeJS",
+        "TailwindCSS",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/buoysophit/Food-khmer.git",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/assets/imgpro/ecom4.png",
+      video: "",
+    },
+  ],
+  nonTechSkills: [
     {
       category: "Linux Customization",
       skill: "Linux Ricing",
@@ -357,7 +369,6 @@ nonTechSkills: [
       level: "Intermediate"
    }
   ],
-  
   favoriteAnime: [
     {
       title: "Demon Slayer",
@@ -414,5 +425,4 @@ nonTechSkills: [
       poster: "https://cdn.myanimelist.net/images/anime/11/33657.jpg"
     }
   ],
- 
 } as const;

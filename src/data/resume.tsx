@@ -59,6 +59,7 @@ export const DATA = {
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "#projects", icon: BinaryIcon, label: "Projects" },
     { href: "/certificate", icon: AwardIcon, label: "Certificates" },
+    { href: "/workflow", icon: ActivityIcon, label: "Workflow" },
     { href: "#contact", icon: SendHorizontalIcon, label: "Contact" },
   ],
   contact: {
@@ -298,11 +299,11 @@ export const DATA = {
       description:
         "Developed a customized Arch Linux desktop environment using i3 window manager. The project includes a personalized setup with themes, icons, and configurations to enhance productivity and aesthetics.",
       technologies: [
-        "",
-        "",
-        "",
-        "",
-        "",
+        "i3wm",
+        "Arch Linux",
+        "Polybar",
+        "Neovim",
+        "Rofi",
       ],
       links: [
         {
@@ -425,4 +426,67 @@ export const DATA = {
       poster: "https://cdn.myanimelist.net/images/anime/11/33657.jpg"
     }
   ],
+  
+  workflow: {
+    hardware: {
+      laptop: "ROG Gaming Laptop",
+      os: "Arch Linux",
+      description: "Rolling release Linux distribution optimized for development"
+    },
+    windowManagers: [
+      {
+        name: "i3wm",
+        type: "Tiling Window Manager",
+        description: "Productivity-focused, keyboard-driven workflow with automatic window tiling",
+        features: [
+          "Automatic window tiling",
+          "Multiple workspace management", 
+          "Custom keybindings",
+          "Polybar integration"
+        ],
+        icon: "🪟",
+        useCase: "Primary choice for coding sessions and development work"
+      },
+      {
+        name: "Hyprland",
+        type: "Wayland Compositor",
+        description: "Modern desktop experience with smooth animations and visual effects",
+        features: [
+          "Smooth window animations",
+          "Advanced window rules",
+          "Blur effects and transparency",
+          "Gesture support"
+        ],
+        icon: "✨",
+        useCase: "Used for creative work, presentations, and visually appealing sessions"
+      }
+    ],
+    tools: {
+      editors: ["Neovim", "VS Code", "Vim"],
+      terminal: ["Kitty Terminal", "Zsh", "Oh My Zsh"],
+      monitoring: ["Neofetch", "Polybar", "htop"]
+    },
+    philosophy: [
+      {
+        title: "Performance",
+        icon: "🚀",
+        description: "Exceptional performance and responsiveness for development tasks"
+      },
+      {
+        title: "Customization", 
+        icon: "🎨",
+        description: "Complete control over desktop environment and workflow"
+      },
+      {
+        title: "Efficiency",
+        icon: "⚡",
+        description: "Keyboard-driven workflow for rapid task switching"
+      },
+      {
+        title: "Learning",
+        icon: "🔧", 
+        description: "Deepens understanding of Linux systems and administration"
+      }
+    ]
+  },
 } as const;

@@ -303,3 +303,21 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
 .terminal-mode .border-green-400 {
   border-color: #00ff00 !important;
 }
+
+/* fr0st.xyz-inspired workflow gallery styles */
+.workflow-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  width: 100%;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Mobile responsiveness for workflow gallery */
+@media screen and (max-width: 768px) {
+  .workflow-row {
+    display: block;
+    gap: 1rem;
+  }
+}

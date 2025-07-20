@@ -13,12 +13,14 @@ const BLUR_FADE_DELAY = 0.04;
 const GALLERY_IMAGES = [
   {
     src: "/assets/img/Pro1.gif",
+    videoSrc: "/assets/video/Pro1.webm",
     alt: "Development Environment in Action", 
     description: "My complete development environment with i3wm and terminal setup",
     category: "workflow"
   },
   {
     src: "/assets/img/Pro2.gif",
+    videoSrc: "/assets/video/Pro2.webm", 
     alt: "Active Coding Session",
     description: "Multiple terminals and editors in a productive coding session", 
     category: "workflow"
@@ -98,7 +100,7 @@ export default function WorkflowPage() {
             <BlurFade delay={BLUR_FADE_DELAY * 22}>
           <div className="grid grid-cols-1 gap-4">
             <WorkflowImage
-              src="/workflowos/i3.gif"
+              src="/assets/imgpro/i3.gif"
               alt="Workflow Overview"
               title="Complete Workflow Overview"
               description="My primary development workspace showcasing the complete i3wm setup"

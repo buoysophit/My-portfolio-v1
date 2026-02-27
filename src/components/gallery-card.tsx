@@ -15,6 +15,7 @@ const galleryItems: GalleryItem[] = [
   { id: 4, src: '/assets/img/g5.png', alt: 'Gallery Image 4', title: 'Project 4' },
   { id: 5, src: '/assets/img/g6.png', alt: 'Gallery Image 5', title: 'Project 5' },
   { id: 6, src: '/assets/img/g7.png', alt: 'Gallery Image 6', title: 'Project 6' },
+  { id: 7, src: '/assets/img/g8.png', alt: 'Gallery Image 7', title: 'Project 7' }, 
 ];
 
 const GalleryCard: React.FC = () => {

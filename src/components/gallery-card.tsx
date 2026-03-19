@@ -15,14 +15,14 @@ const galleryItems: GalleryItem[] = [
   { id: 4, src: '/assets/img/g5.png', alt: 'Gallery Image 4', title: 'Project 4' },
   { id: 5, src: '/assets/img/g6.png', alt: 'Gallery Image 5', title: 'Project 5' },
   { id: 6, src: '/assets/img/g7.png', alt: 'Gallery Image 6', title: 'Project 6' },
-  { id: 7, src: '/assets/img/g8.png', alt: 'Gallery Image 7', title: 'Project 7' }, 
+  { id: 7, src: '/assets/img/g8.png', alt: 'Gallery Image 7', title: 'Project 7' },
 ];
 
 const GalleryCard: React.FC = () => {
   return (
     <section className="py-16 px-1 ">
       <div className="max-w-6xl mx-auto">
-   
+
         {/* 2 column grid for mobile, 3 column grid for desktop */}
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {galleryItems.map((item) => (
@@ -31,13 +31,13 @@ const GalleryCard: React.FC = () => {
               className="relative overflow-hidden rounded-lg shadow-lg"
             >
               <div className="relative w-full h-80 bg-gray-200 dark:bg-gray-700">
-          <Image
-            src={item.src}
-            alt={item.alt}
-            fill
-            className="object-cover"
-            sizes="(max-width: 768px) 50vw, (max-width: 1200px) 50vw, 33vw"
-          />
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 50vw, (max-width: 1200px) 50vw, 33vw"
+                />
               </div>
             </div>
           ))}

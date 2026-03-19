@@ -48,7 +48,9 @@ export function ProjectCard({
       }
     >
       <Link
-        href={href || "#"}
+        href={href || links?.find((l) => l.type === "Source")?.href || "#"}
+        target={(!href || href.startsWith("http")) ? "_blank" : undefined}
+        rel={(!href || href.startsWith("http")) ? "noopener noreferrer" : undefined}
         className={cn("block cursor-pointer", className)}
       >
         {video && (

@@ -12,7 +12,7 @@ export function TerminalToggle() {
       variant="ghost"
       size="icon"
       onClick={toggleTerminalMode}
-      className="size-14"
+      className="size-12 rounded-full"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +24,7 @@ export function TerminalToggle() {
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
-        className="size-8"
+        className="size-6"
       >
         <rect width="18" height="18" x="3" y="3" rx="2" ry="2"/>
         <polyline points="9,9 12,12 9,15"/>

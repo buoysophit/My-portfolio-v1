@@ -4,15 +4,19 @@ export type IconProps = React.HTMLAttributes<SVGElement>;
 
 export const Icons = {
   globe: (props: IconProps) => <GlobeIcon {...props} />,
-  email: (props: IconProps) => <MailIcon {...props} />,
+  email: (props: IconProps) => (
+    <img 
+      src="/email.png" 
+      alt="Email" 
+      {...(props as any)} 
+    />
+  ),
   linkedin: (props: IconProps) => (
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}>
-      <title>LinkedIn</title>
-      <path
-        fill="currentColor"
-        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-      />
-    </svg>
+    <img 
+      src="/linkedin.png" 
+      alt="LinkedIn" 
+      {...(props as any)} 
+    />
   ),
   x: (props: IconProps) => (
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}>
@@ -221,14 +225,18 @@ export const Icons = {
     </svg>
   ),
   telegram: (props: IconProps) => (
-    <svg {...props} viewBox="0 0 24 24" fill="currentColor">
-      <path d="M12 0C5.374 0 0 5.374 0 12s5.374 12 12 12 12-5.374 12-12S18.626 0 12 0zm5.568 8.16c-.169 1.858-.896 6.728-.896 6.728-.598 4.166-.896 4.166-1.792 3.888-.896-.278-1.792-.896-3.584-1.792-1.493-.747-2.389-1.194-3.584-1.792-.299-.149-.598-.448-.299-.747.299-.299.747-.598 1.195-.896l3.285-2.389c.448-.299.747-.598.299-.896-.448-.299-.896 0-1.344.299L8.16 12.568c-.598.448-1.195.299-1.792.149-.598-.149-1.195-.448-1.195-.448s-.448-.299.299-.598c.747-.299 1.792-.747 1.792-.747l6.129-2.688c1.045-.448 2.09-.747 2.09.598z"/>
-    </svg>
+    <img 
+      src="/Telegram.png" 
+      alt="Telegram" 
+      {...(props as any)} 
+    />
   ),
   facebook: (props: IconProps) => (
-    <svg {...props} viewBox="0 0 24 24" fill="currentColor">
-      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-    </svg>
+    <img 
+      src="/Facebook.png" 
+      alt="Facebook" 
+      {...(props as any)} 
+    />
   ),
   award: (props: IconProps) => (
     <svg
@@ -239,5 +247,12 @@ export const Icons = {
     >
       <path d="M12 2a7 7 0 100 14 7 7 0 000-14zm0 12a5 5 0 110-10 5 5 0 010 10zm0 2c-3.33 0-10 1.67-10 5v3h20v-3c0-3.33-6.67-5-10-5z" />
     </svg>
+  ),
+  khmercoder: (props: IconProps) => (
+    <img 
+      src="https://khmercoder.com/logo.svg" 
+      alt="KhmerCoder" 
+      {...(props as any)} 
+    />
   ),
 };

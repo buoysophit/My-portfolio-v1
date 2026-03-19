@@ -1,7 +1,7 @@
 "use client";
 
 import { DATA } from "@/data/resume";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import BlurFade from "@/components/magicui/blur-fade";
 import Image from "next/image";
@@ -17,98 +17,67 @@ export default function MyFavAnime() {
   };
 
   return (
-    <section id="favorite-anime">
-      <div className="space-y-12 w-full py-12">
-        <BlurFade delay={BLUR_FADE_DELAY * 11}>
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="space-y-2">
-              <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                My Favorite Anime
-              </div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-                Anime I Love Watching
-              </h2>
-              <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Here are some of my favorite anime series that I highly recommend.
-              </p>
-            </div>
-          </div>
-        </BlurFade>
+    <section id="favorite-anime" className="flex flex-col gap-6 w-full mt-4">
+      <BlurFade delay={BLUR_FADE_DELAY}>
+        <h1 className="text-3xl font-bold tracking-tighter">My Favorite Anime</h1>
+        <p className="text-muted-foreground mt-2 text-sm">
+          A collection of animated series and movies that I dive into after a long day of coding.
+        </p>
+      </BlurFade>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-          {DATA.favoriteAnime.map((anime, id) => (
-            <BlurFade
-              key={anime.title}
-              delay={BLUR_FADE_DELAY * 12 + id * 0.05}
-            >
-              <Card className="group relative overflow-hidden rounded-xl border-0 bg-background/60 backdrop-blur supports-[backdrop-filter]:bg-background/60 hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                <div className="relative aspect-[3/4] overflow-hidden">
-                  {!imageErrors[anime.title] ? (
-                    <Image
-                      src={anime.poster}
-                      alt={`${anime.title} poster`}
-                      fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-110"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                      onError={() => handleImageError(anime.title)}
-                    />
-                  ) : (
-                    <div className="w-full h-full bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
-                      <div className="text-center p-4">
-                        <div className="text-4xl mb-2">{anime.icon}</div>
-                        <h3 className="text-white font-bold text-lg">{anime.title}</h3>
-                        <p className="text-gray-300 text-sm">{anime.genre}</p>
-                      </div>
+      <div className="grid grid-cols-2 gap-4 pt-4 sm:grid-cols-3">
+        {DATA.favoriteAnime.map((anime, id) => (
+          <BlurFade
+            key={anime.title}
+            delay={BLUR_FADE_DELAY * 2 + id * 0.05}
+          >
+            <Card className="flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full">
+              <div className="relative aspect-[3/4] w-full overflow-hidden">
+                {!imageErrors[anime.title] ? (
+                  <Image
+                    src={anime.poster}
+                    alt={`${anime.title} poster`}
+                    fill
+                    className="object-cover transition-transform duration-300 hover:scale-105"
+                    sizes="(max-width: 768px) 50vw, 33vw"
+                    onError={() => handleImageError(anime.title)}
+                  />
+                ) : (
+                  <div className="w-full h-full bg-muted flex items-center justify-center">
+                    <div className="text-center p-4">
+                      <div className="text-4xl mb-2">{anime.icon}</div>
                     </div>
-                  )}
-                  
-                  {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                  
-                  {/* Status Badge */}
-                  <div className="absolute top-3 right-3">
-                    <Badge 
-                      variant={anime.status === "Completed" ? "default" : "secondary"}
-                      className="text-xs font-medium shadow-lg"
-                    >
-                      {anime.status}
-                    </Badge>
                   </div>
-                  
-                  {/* Rating Badge */}
-                  <div className="absolute top-3 left-3">
-                    <Badge 
-                      variant="outline" 
-                      className="text-xs bg-black/50 text-white border-white/30 backdrop-blur-sm"
-                    >
-                      ⭐ {anime.rating}
-                    </Badge>
-                  </div>
-                  
-                  {/* Content Overlay */}
-                  <CardContent className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                    <div className="space-y-2">
-                      <div className="flex items-center space-x-2">
-                        <span className="text-xl">{anime.icon}</span>
-                        <h3 className="font-bold text-lg leading-tight">
-                          {anime.title}
-                        </h3>
-                      </div>
-                      
-                      <p className="text-xs text-gray-300 font-medium">
-                        {anime.genre}
-                      </p>
-                      
-                      <p className="text-sm text-gray-200 leading-relaxed opacity-90 line-clamp-3 overflow-hidden">
-                        {anime.description}
-                      </p>
-                    </div>
-                  </CardContent>
+                )}
+              </div>
+              <CardHeader className="px-2 pt-2 pb-1">
+                <div className="space-y-1">
+                  <CardTitle className="mt-1 text-sm leading-tight flex items-center gap-1.5 line-clamp-1">
+                    {anime.icon} {anime.title}
+                  </CardTitle>
+                  <p className="font-sans text-[10px] text-muted-foreground">
+                    {anime.genre}
+                  </p>
                 </div>
-              </Card>
-            </BlurFade>
-          ))}
-        </div>
+              </CardHeader>
+              <CardContent className="mt-auto flex flex-col px-2 pb-2 pt-0 w-full">
+                <p className="text-pretty font-sans text-[11px] text-muted-foreground line-clamp-3">
+                  {anime.description}
+                </p>
+              </CardContent>
+              <CardFooter className="px-2 pb-2 mt-auto">
+                <div className="flex flex-wrap gap-1">
+                  <Badge variant={anime.status === "Completed" ? "secondary" : "default"} className="px-1 py-0 text-[10px] font-medium leading-none">
+                    {anime.status}
+                  </Badge>
+                  <Badge variant="outline" className="px-1 py-0 text-[10px] font-medium leading-none">
+                    ⭐ {anime.rating}
+                  </Badge>
+                </div>
+              </CardFooter>
+            </Card>
+          </BlurFade>
+        ))}
       </div>
     </section>
   );

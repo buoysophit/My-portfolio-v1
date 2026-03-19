@@ -1,4 +1,5 @@
 import Navbar from "@/components/navbar";
+import { CommandMenu } from "@/components/command-menu";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TerminalModeProvider } from "@/context/terminal-mode-context";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -58,7 +59,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased max-w-4xl mx-auto py-12 sm:py-23 px-6",
+          "min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto pt-20 pb-12 px-6",
           fontSans.variable
         )}
       >
@@ -66,6 +67,7 @@ export default function RootLayout({
           <ThemeProvider attribute="class" defaultTheme="light">
             <TooltipProvider delayDuration={0}>
               {children}
+              <CommandMenu />
               <Navbar />
             </TooltipProvider>
           </ThemeProvider>

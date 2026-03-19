@@ -321,3 +321,45 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
     gap: 1rem;
   }
 }
+
+/* View Transition API for Theme Switch */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+.dark::view-transition-old(root) {
+  z-index: 1;
+}
+.dark::view-transition-new(root) {
+  z-index: 999;
+}
+::view-transition-old(root) {
+  z-index: 999;
+}
+::view-transition-new(root) {
+  z-index: 1;
+}
+
+/* CMDK Specific Styles */
+[cmdk-group-heading] {
+  padding: 0.375rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: hsl(var(--muted-foreground));
+}
+[cmdk-overlay] {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background-color: hsl(var(--background) / 0.8);
+  backdrop-filter: blur(4px);
+}
+dialog[cmdk-dialog] {
+  background: transparent;
+  border: none;
+  max-width: 32rem;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}

@@ -1,6 +1,6 @@
 import { Icons } from "@/components/icons";
 import Image from 'next/image';
-import { HomeIcon, FolderIcon, Contact2Icon, BinaryIcon, ActivityIcon, FolderHeartIcon, AwardIcon, SendHorizontalIcon } from "lucide-react";
+import { HomeIcon, FolderIcon, Contact2Icon, BinaryIcon, ActivityIcon, FolderHeartIcon, AwardIcon, SendHorizontalIcon, BookOpenIcon } from "lucide-react";
 
 export const DATA = {
   name: "BuoySophit",
@@ -52,15 +52,20 @@ export const DATA = {
         { name: "VS Code", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
         { name: "Vim", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vim/vim-original.svg" },
         { name: "Neovim", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/neovim/neovim-original.svg" },
+        { name: "Vue", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" },
+        { name: "Tailwind", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
+        { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+        { name: "Astro", icon: "https://cdn.simpleicons.org/astro/BC52EE" },
+        { name: "Claude AI", icon: "https://cdn.simpleicons.org/anthropic/D97757" },
       ]
     }
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "#projects", icon: BinaryIcon, label: "Projects" },
+    { href: "/projects", icon: BinaryIcon, label: "Projects" },
     { href: "/certificate", icon: AwardIcon, label: "Certificates" },
     { href: "/workflow", icon: ActivityIcon, label: "Workflow" },
-    { href: "#contact", icon: SendHorizontalIcon, label: "Contact" },
+    { href: "/blog", icon: BookOpenIcon, label: "Blog" },
   ],
   contact: {
     email: "Bouysophit11@gmail.com",
@@ -84,6 +89,12 @@ export const DATA = {
         name: "Telegram",
         url: "https://t.me/buoysophitt",
         icon: Icons.telegram,
+        navbar: true,
+      },
+      KhmerCoder: {
+        name: "KhmerCoder",
+        url: "https://khmercoder.com/@phitter",
+        icon: Icons.khmercoder,
         navbar: true,
       }
     },

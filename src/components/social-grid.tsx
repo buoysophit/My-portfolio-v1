@@ -30,7 +30,7 @@ const socialLinks = [
   {
     name: "Facebook",
     handle: "buoysophit",
-    href: "https://www.facebook.com/buoysophit",
+    href: "https://www.facebook.com/share/1E772fgc4u/?mibextid=wwXIfr",
     Icon: Icons.facebook,
   },
   {

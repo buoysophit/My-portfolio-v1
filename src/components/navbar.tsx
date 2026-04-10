@@ -63,7 +63,7 @@ export default function Navbar() {
             </TooltipContent>
           </Tooltip>
         </DockIcon>
-
+{/* 
         <DockIcon>
           <Tooltip>
             <TooltipTrigger asChild>
@@ -75,7 +75,7 @@ export default function Navbar() {
               <p>Terminal Mode</p>
             </TooltipContent>
           </Tooltip>
-        </DockIcon>
+        </DockIcon> */}
 
         <DockIcon>
           <Tooltip>

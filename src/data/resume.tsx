@@ -66,6 +66,7 @@ export const DATA = {
     { href: "/certificate", icon: AwardIcon, label: "Certificates" },
     { href: "/workflow", icon: ActivityIcon, label: "Workflow" },
     { href: "/blog", icon: BookOpenIcon, label: "Blog" },
+    { href: "/music", icon: Icons.spotify, label: "Music" },
   ],
   contact: {
     email: "Bouysophit11@gmail.com",
@@ -435,6 +436,15 @@ export const DATA = {
       description: "Incredible adventure following young hunters in a world of mystery",
       icon: "🎯",
       poster: "https://cdn.myanimelist.net/images/anime/11/33657.jpg"
+    },
+    {
+      title: "Cowboy Bebop",
+      genre: "Sci-Fi, Neo-Noir, Action",
+      rating: "9.5/10",
+      status: "Completed",
+      description: "カウボーイビバップ — A timeless space western following bounty hunters across the solar system. Jazz, existentialism, and unforgettable style.",
+      icon: "🚀",
+      poster: "https://cdn.myanimelist.net/images/anime/4/19644.jpg"
     }
   ],
   

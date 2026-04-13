@@ -114,7 +114,7 @@ export default function HeroProfile() {
             <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
               I&apos;m a{" "}
               <strong className="text-foreground font-semibold">
-                Frontend Developer
+                Web Developer
               </strong>{" "}
               based in Phnom Penh who loves building clean, functional web
               experiences.{" "}

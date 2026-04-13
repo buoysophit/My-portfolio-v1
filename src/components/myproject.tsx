@@ -14,7 +14,7 @@ export default function Projects() {
     <section id="projects">
       <BlurFade delay={BLUR_FADE_DELAY * 9}>
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-bold">Latest Blog</h2>
+          <h2 className="text-xl font-bold">Latest Projects</h2>
           <Link
             href="/projects"
             className="text-sm text-muted-foreground hover:text-foreground transition-colors"

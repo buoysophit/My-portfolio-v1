@@ -57,6 +57,7 @@ export const DATA = {
         { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
         { name: "Astro", icon: "https://cdn.simpleicons.org/astro/BC52EE" },
         { name: "Claude AI", icon: "https://cdn.simpleicons.org/anthropic/D97757" },
+        { name: "Postman", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" },
       ]
     }
   ],
@@ -65,7 +66,7 @@ export const DATA = {
     { href: "/projects", icon: BinaryIcon, label: "Projects" },
     { href: "/certificate", icon: AwardIcon, label: "Certificates" },
     { href: "/workflow", icon: ActivityIcon, label: "Workflow" },
-    { href: "/blog", icon: BookOpenIcon, label: "Blog" },
+    // { href: "/blog", icon: BookOpenIcon, label: "Blog" },
     { href: "/music", icon: Icons.spotify, label: "Music" },
   ],
   contact: {

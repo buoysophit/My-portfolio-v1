@@ -32,6 +32,12 @@ const nextConfig = {
         hostname: 'cdn.myanimelist.net',
         port: '',
         pathname: '/images/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'stardev.io',
+        port: '',
+        pathname: '/**',
       }
     ],
     formats: ['image/webp', 'image/avif'],

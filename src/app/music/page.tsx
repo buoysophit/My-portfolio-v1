@@ -325,7 +325,7 @@ export default function MusicPage() {
           {/* Controls */}
           <div className="mt-5 flex items-center justify-between">
             {/* Left: shuffle + repeat */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 sm:gap-3">
               <button
                 onClick={() => setShuffle((s) => !s)}
                 className="font-mono text-xs px-2 py-1 transition-colors"
@@ -447,10 +447,8 @@ export default function MusicPage() {
         >
           {/* Header row */}
           <div
-            className="grid font-mono text-[11px] px-4 py-2"
+            className="grid font-mono text-[10px] sm:text-[11px] px-2 sm:px-4 py-2 grid-cols-[1.5rem_1fr_3rem] sm:grid-cols-[2rem_1fr_1fr_4rem] gap-2 sm:gap-4"
             style={{
-              gridTemplateColumns: "2rem 1fr 1fr 4rem",
-              gap: "0.5rem",
               borderBottom: "1px solid hsl(var(--border))",
               background: "hsl(var(--muted))",
               color: "hsl(var(--muted-foreground))",
@@ -458,7 +456,7 @@ export default function MusicPage() {
           >
             <span>#</span>
             <span>title</span>
-            <span>artist</span>
+            <span className="hidden sm:block">artist</span>
             <span className="text-right">time</span>
           </div>
 
@@ -469,10 +467,8 @@ export default function MusicPage() {
               <div
                 key={track.id}
                 onClick={() => handleSelect(track)}
-                className="grid items-center px-4 py-2.5 cursor-pointer transition-colors"
+                className="grid items-center px-2 sm:px-4 py-2.5 cursor-pointer transition-colors grid-cols-[1.5rem_1fr_3rem] sm:grid-cols-[2rem_1fr_1fr_4rem] gap-2 sm:gap-4"
                 style={{
-                  gridTemplateColumns: "2rem 1fr 1fr 4rem",
-                  gap: "0.5rem",
                   background: isActive
                     ? "hsl(var(--accent))"
                     : i % 2 === 0
@@ -500,22 +496,26 @@ export default function MusicPage() {
                 }}
               >
                 <span
-                  className="font-mono text-xs"
+                  className="font-mono text-[10px] sm:text-xs"
                   style={{ color: "hsl(var(--muted-foreground))" }}
                 >
                   {isActive && isPlaying ? "▶" : track.id}
                 </span>
-                <span className="text-sm font-medium truncate">
-                  {track.title}
+                <span className="text-sm font-medium truncate flex flex-col justify-center">
+                  <span className="truncate">{track.title}</span>
+                  {/* On mobile, show artist below title */}
+                  <span className="block sm:hidden text-[10px] text-muted-foreground truncate font-normal mt-0.5">
+                    {track.artist}
+                  </span>
                 </span>
                 <span
-                  className="text-xs truncate"
+                  className="hidden sm:block text-xs truncate"
                   style={{ color: "hsl(var(--muted-foreground))" }}
                 >
                   {track.artist}
                 </span>
                 <span
-                  className="font-mono text-xs text-right"
+                  className="font-mono text-[10px] sm:text-xs text-right"
                   style={{ color: "hsl(var(--muted-foreground))" }}
                 >
                   {isActive ? formatTime(durationSec) : track.duration}

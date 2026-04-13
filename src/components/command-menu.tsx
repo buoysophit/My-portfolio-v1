@@ -75,7 +75,7 @@ export function CommandMenu() {
       open={open}
       onOpenChange={setOpen}
       label="Global Command Menu"
-      className="fixed inset-0 z-50 flex items-start justify-center pt-[10vh] bg-background/80 backdrop-blur-sm sm:pt-[20vh] transition-all"
+      className="fixed inset-0 z-50 flex items-start justify-center pt-[10vh] px-4 bg-background/80 backdrop-blur-sm sm:pt-[20vh] transition-all"
     >
       <div className="relative w-full max-w-lg overflow-hidden rounded-xl border border-border bg-popover text-popover-foreground shadow-2xl">
         <div className="flex items-center border-b border-border px-4 gap-2">
